@@ -126,3 +126,128 @@ for _ in range(n):
 
     elif op[0] == "empty":
         print("true" if front is None else "false")
+
+# You are tasked with managing a singly linked list in a university system. Each node in the linked list contains an integer value.
+
+# Your objective is to write a program that adds a new element to the linked list at a specified position.
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+n = int(input())
+arr = list(map(int, input().split()))
+x = int(input())
+pos = int(input())
+
+head = Node(arr[0])
+temp = head
+
+for i in range(1, n):
+    temp.next = Node(arr[i])
+    temp = temp.next
+
+if pos >= 0 and pos <= n:
+
+    newnode = Node(x)
+
+    if pos == 0:
+        newnode.next = head
+        head = newnode
+
+    else:
+        temp = head
+
+        for i in range(pos - 1):
+            temp = temp.next
+
+        newnode.next = temp.next
+        temp.next = newnode
+
+temp = head
+
+while temp:
+    print(temp.data, end="->")
+    temp = temp.next
+
+print("null")
+
+# You are tasked with managing a singly linked list in a university system. Each node in the linked list contains an integer value.
+# Your objective is to write a program that adds a new element to the beginning of the linked list.
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+n = int(input())
+arr = list(map(int, input().split()))
+x = int(input())
+
+head = Node(arr[0])
+temp = head
+
+for i in range(1, n):
+    temp.next = Node(arr[i])
+    temp = temp.next
+
+# Add new node at beginning
+newnode = Node(x)
+newnode.next = head
+head = newnode
+
+# Print linked list
+temp = head
+
+while temp:
+    print(temp.data, end="->")
+    temp = temp.next
+
+print("null")
+
+# You are managing a singly linked list in a university system. Each node in the linked list contains an integer value. 
+# Your task is to implement a function `indexOf()` that returns the zero-based index of the first occurrence of a specified value in the linked list.
+# If the value is not found in the list, the function should return `-1
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+n = int(input())
+arr = list(map(int, input().split()))
+x = int(input())
+
+# Create linked list
+head = Node(arr[0])
+temp = head
+
+for i in range(1, n):
+    temp.next = Node(arr[i])
+    temp = temp.next
+
+# Find index
+temp = head
+index = 0
+answer = -1
+
+while temp:
+    if temp.data == x:
+        answer = index
+        break
+
+    index += 1
+    temp = temp.next
+
+print(answer)
+
+
+
+
+
+
+
