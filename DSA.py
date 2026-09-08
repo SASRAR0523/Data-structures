@@ -245,6 +245,74 @@ while temp:
 
 print(answer)
 
+# You are managing a singly linked list in a university system. Each node in the linked list contains an integer value. 
+# Your task is to implement a function `lastIndexOf()` that returns the zero-based index of the last occurrence of a specified value in the linked list.
+# If the value is not found in the list, the function should return `-1`.
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+n = int(input())
+arr = list(map(int, input().split()))
+x = int(input())
+
+# Create linked list
+head = Node(arr[0])
+temp = head
+
+for i in range(1, n):
+    temp.next = Node(arr[i])
+    temp = temp.next
+
+# Find last occurrence
+temp = head
+index = 0
+answer = -1
+
+while temp:
+    if temp.data == x:
+        answer = index
+
+    index += 1
+    temp = temp.next
+
+print(answer)
+
+# You are tasked with managing a singly linked list in a university system. Each node in the linked list contains an integer value. 
+# Your objective is to implement a function `removeFirst()` that removes the first node from the linked list.
+# If the linked list is empty, the function should handle it gracefully without performing any operation.
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+n = int(input())
+arr = list(map(int, input().split()))
+
+head = Node(arr[0])
+temp = head
+
+for i in range(1, n):
+    temp.next = Node(arr[i])
+    temp = temp.next
+
+# Remove first node
+head = head.next
+
+# Print linked list
+temp = head
+
+while temp:
+    print(temp.data, end="->")
+    temp = temp.next
+
+print("null")
+
+
 
 
 
