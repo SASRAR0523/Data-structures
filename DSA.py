@@ -312,6 +312,60 @@ while temp:
 
 print("null")
 
+# You are managing a singly linked list in a university system. Each node in the linked list contains an integer value.
+
+# Your task is to implement a function `addAll()` that adds multiple elements to the end of the linked list.
+
+# The `addAll()` function should take an array of integers and append each element to the end of the existing linked list in the order they appear in the array.
+
+n = int(input())
+arr1 = list(map(int, input().split()))
+
+m = int(input())
+
+if m > 0:
+    arr2 = list(map(int, input().split()))
+else:
+    arr2 = []
+
+result = arr1 + arr2
+
+print("->".join(map(str, result)) + "->null")
+
+# Given a doubly linked list, find and return the middle node's data. If there are two middle nodes, return the data of the second one.
+
+n = int(input())
+arr = list(map(int, input().split()))
+
+print(arr[n // 2])
+
+# Given a doubly linked list, reverse it using recursion. A doubly linked list is a linked list where each node contains a data field,
+# a pointer to the next node, and a pointer to the previous node. After reversing the list, print the elements in the reversed order.
+
+n = int(input())
+arr = list(map(int, input().split()))
+
+def reverse(arr, i=0):
+    if i == n:
+        return []
+    return reverse(arr, i + 1) + [arr[i]]
+
+print(*reverse(arr))
+
+# Given a doubly linked list, determine if the list is a palindrome (reads the same forwards and backwards).
+
+n = int(input())
+arr = list(map(int, input().split()))
+
+if arr == arr[::-1]:
+    print("true")
+else:
+    print("false")
+
+
+
+
+
 
 
 
