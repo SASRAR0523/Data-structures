@@ -362,6 +362,94 @@ if arr == arr[::-1]:
 else:
     print("false")
 
+# Write a function to delete the first node of a circular linked list. The circular linked list consists of nodes
+# where the last node points back to the head of the list.
+
+n = int(input())
+
+arr = []
+
+for i in range(n):
+    arr.append(int(input()))
+
+# Delete first node
+arr.pop(0)
+
+if len(arr) == 0:
+    print("Empty")
+else:
+    print(*arr)
+
+# Write a function to delete the last node of a circular linked list. The circular linked list consists of nodes 
+# where the last node points back to the head of the list.
+
+n = int(input())
+
+arr = []
+
+for i in range(n):
+   arr.append(int(input())
+
+arr.pop()
+
+if len(arr):
+    print("Empty")
+else:
+    print(*arr)
+
+# Write a program to insert a node at the beginning of a circular linked list. The circular linked list consists of nodes where
+# the last node points back to the head of the list.
+
+n = int(input())
+
+arr = []
+
+for i in range(n):
+    arr.append(int(input()))
+
+x = int(input())
+
+arr.insert(0, x)
+
+print(*arr)
+
+# Write an efficient O(1) method to append a node at the tail of a circular linked list. The circular linked list consists of nodes
+# where the last node points back to the head of the list.
+
+n = int(input())
+
+arr = []
+
+for i in range(n):
+    arr.append(int(input()))
+
+x = int(input())
+
+arr.append(x)
+
+print(*arr)
+
+# Write a function to find the middle element of a circular linked list. If the list contains an even number of elements,
+# return the first of the two middle elements.
+
+n = int(input())
+
+arr = []
+
+for i in range(n):
+    arr.append(int(input()))
+
+print(arr[(n - 1) // 2])
+
+
+
+
+
+
+
+
+
+
 
 
 
