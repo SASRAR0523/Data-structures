@@ -466,7 +466,23 @@ target = 7
 
 print(binary_search(arr, target))
 
+# Print multiples of 7 from 1 to N.
 
+n = int(input())
+
+if n < 7:
+    print(-1)
+else:
+    print(*range(7, n + 1, 7))
+
+# Print numbers from 1 to N which are multiples of both 3 and 5.
+
+n = int(input())
+
+if n < 15:
+    print(-1)
+else:
+    print(*range(15, n + 1, 15))
 
 
 
