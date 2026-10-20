@@ -479,16 +479,41 @@ else:
 
 n = int(input())
 
-if n < 15:
-    print(-1)
+for i in range(1, n + 1):
+    if i % 3 == 0 and i % 5 == 0:
+        print(i)
+
+# Find and print the second largest distinct odd number from a given array of integers. If there are fewer than two distinct odd numbers, print -1.
+n = int(input())
+arr = list(map(int, input().split()))
+
+odd_nums = list(set([x for x in arr if x % 2 != 0]))
+
+odd_nums.sort(reverse=True)
+
+# Print the second largest if available, otherwise -1
+if len(odd_nums) >= 2:
+    print(odd_nums[1])
 else:
-    print(*range(15, n + 1, 15))
+    print(-1)
+    
+# You are given a list of strings in array format. Some strings may repeat multiple times. Your task is to remove duplicate strings and print only unique strings,
+# preserving the order of their first occurrence. The first occurrence of each string should be kept, and all subsequent duplicates should be ignored.
 
+import sys
 
+tokens = sys.stdin.read().split()
 
+if tokens:
+    try:
+        n = int(tokens[0])
+        arr = tokens[1:]
+    except ValueError:
+        arr = tokens
 
-
-
+    unique_arr = list(dict.fromkeys(arr))
+    
+    print(*(unique_arr))
 
 
 
