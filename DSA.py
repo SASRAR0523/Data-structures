@@ -515,8 +515,47 @@ if tokens:
     
     print(*(unique_arr))
 
+# Given a sorted array of integers of size $N$, remove the duplicate elements in-place so that each unique element appears only once.
+# The relative order of the elements must be maintained.Finally, print the number of unique elements ($k$).
 
+import sys
 
+input_data = sys.stdin.read().split()
+if input_data:
+    n = int(input_data[0])
+    nums = [int(x) for x in input_data[1:n+1]]
+
+    if n > 0:
+        k = 1
+        for i in range(1, n):
+            if nums[i] != nums[i-1]:
+                nums[k] = nums[i]
+                k += 1
+
+        print(k)
+    else:
+        print(0)
+        
+# Your task is to find and print the duplicate characters in the string. If a character appears more than once, it should be printed as a duplicate.
+# Print the characters in insertion order (the order in which the duplicated characters first reappear).
+
+s = input().strip()
+
+seen = set()
+duplicates = []
+has_duplicates = False
+
+for char in s:
+    if char in seen and char not in duplicates:
+        duplicates.append(char)
+        has_duplicates = True
+    seen.add(char)
+
+if has_duplicates:
+    for char in duplicates:
+        print(char)
+else:
+    print(-1)
 
 
 
