@@ -557,8 +557,24 @@ if has_duplicates:
 else:
     print(-1)
 
+# Given an m × n matrix, check whether all rows contain the same elements with the same frequency, regardless of order.
+# Also, verify that every row has the same sum; return true if both conditions hold, otherwise return false.
 
+m, n = map(int, input().split())
 
+first = list(map(int, input().split()))
+ref = sorted(first)
+s = sum(first)
+
+result = True
+
+for i in range(m - 1):
+    row = list(map(int, input().split()))
+
+    if sum(row) != s or sorted(row) != ref:
+        result = False
+
+print(str(result).lower())
 
 
 
