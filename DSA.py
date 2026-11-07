@@ -576,7 +576,24 @@ for i in range(m - 1):
 
 print(str(result).lower())
 
+# Given a positive integer N, print N lines of a pattern. For the ith line (1-based), print the even number 2*(i+1) exactly (i+1) times,
+# separated by a space. Each subsequent line increases the even number by 2 and the count by 1.
 
+n = int(input())
 
+for i in range(2, n + 2):
+    print(*([i * 2] * i))
+
+# Given a positive integer N, print N lines of a pattern. Each line contains 5 consecutive integers followed by 5 asterisks.
+
+n = int(input())
+
+for i in range(n):
+    start = i * 10 + 1
+
+    for j in range(start, start + 5):
+        print(j, end=" ")
+
+    print("* " * 4 + "*")
 
 
